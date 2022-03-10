@@ -1,5 +1,8 @@
 package fr.afpa.model;
 
+
+import java.util.Date;
+
 public class Todo {
 
 	
@@ -7,12 +10,14 @@ public class Todo {
 	    private String Description;
 	    private Date creationTodo;
 	    private String status;
+	    private int userId;
 
-	    public Todo(String title, String description, Date creationTodo, String status) {
+	    public Todo(String title, String description, Date creationTodo, String status, int userId) {
 	        Title = title;
 	        Description = description;
 	        this.creationTodo = creationTodo;
 	        this.status = status;
+	        this.userId = userId;
 	    }
 
 	    public String getTitle() {
@@ -46,5 +51,15 @@ public class Todo {
 	    public void setStatus(String status) {
 	        this.status = status;
 	    }
+
+		public int getUserId() {
+			return userId;
+		}
+
+		public void setUserId(int userId) {
+			this.userId = userId;
+		}
+	    
+	    
 	
 }
